@@ -12,4 +12,15 @@ soup = BeautifulSoup(page.text, 'html.parser')
 products = soup.find('ul', class_='products-listing small')
 
 product_list = products.find_all('article', class_='hm-product-item')
-print(product_list[0])
+
+# Product id:
+product_id = [p.get('data-articlecode') for p in product_list]
+
+#produt category:
+product_category = [p.get('data-category') for p in product_list]
+
+#produt name:
+#product_name = [p.get('data-category') for p in product_list]
+product_list = products.find_all('a', class_='link')
+product_name = [p.get_text() for p in product_list]
+print(product_name)
