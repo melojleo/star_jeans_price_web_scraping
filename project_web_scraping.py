@@ -23,4 +23,4 @@ product_category = [p.get('data-category') for p in product_list]
 #product_name = [p.get('data-category') for p in product_list]
 product_list = products.find_all('a', class_='link')
 product_name = [p.get_text() for p in product_list]
-print(product_name)
+print(product_category)
