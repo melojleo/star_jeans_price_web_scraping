@@ -1,1 +1,2 @@
-# star_jeans_price_web_scraping-
+# Web Scraping - Star Jeans 
+
